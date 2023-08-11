@@ -11,9 +11,9 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@remix-run/node": "^1.13.0",
-    "@remix-run/react": "^1.13.0",
-    "@remix-run/serve": "^1.13.0",
+    "@remix-run/node": "nightly",
+    "@remix-run/react": "nightly",
+    "@remix-run/serve": "nightly",
     "isbot": "^3.6.5",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -22,7 +22,7 @@
     "tiny-invariant": "^1.3.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.13.0",
+    "@remix-run/dev": "nightly",
     "@remix-run/eslint-config": "^1.13.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
