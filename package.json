@@ -3,10 +3,8 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
+    "dev": "remix dev",
     "build": "remix build",
-    "dev": "run-p dev:*",
-    "dev:build": "NODE_ENV=development remix dev",
-    "dev:serve": "NODE_ENV=development PORT=3001 nodemon --watch build node_modules/.bin/remix-serve build",
     "start": "remix-serve build",
     "typecheck": "tsc"
   },
@@ -14,7 +12,7 @@
     "@remix-run/node": "nightly",
     "@remix-run/react": "nightly",
     "@remix-run/serve": "nightly",
-    "isbot": "^3.6.5",
+    "isbot": "^3.6.13",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,12 +21,11 @@
   },
   "devDependencies": {
     "@remix-run/dev": "nightly",
-    "@remix-run/eslint-config": "^1.13.0",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "eslint": "^8.27.0",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.47.0",
     "npm-run-all": "^4.1.5",
-    "typescript": "^4.8.4"
+    "typescript": "^5.1.6"
   },
   "engines": {
     "node": ">=14"
