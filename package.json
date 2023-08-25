@@ -1,10 +1,9 @@
 {
-  "name": "remix-tutorial",
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "remix dev",
     "build": "remix build",
+    "dev": "remix dev",
     "start": "remix-serve build",
     "typecheck": "tsc"
   },
@@ -21,13 +20,13 @@
   },
   "devDependencies": {
     "@remix-run/dev": "nightly",
+    "@remix-run/eslint-config": "nightly",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.47.0",
-    "npm-run-all": "^4.1.5",
     "typescript": "^5.1.6"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18.0.0"
   }
 }
