@@ -22,10 +22,18 @@ export type ContactRecord = ContactMutation & {
   createdAt: string;
 };
 
+// https://remix.run/docs/en/main/guides/manual-mode#keeping-in-memory-server-state-across-rebuilds
+function remember<T>(key: string, getValue: () => T): T {
+  const g = global as any;
+  g.__remember ??= {};
+  g.__remember[key] ??= getValue();
+  return g.__remember[key];
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // This is just a fake DB table. In a real app you'd be talking to a real db or
 // fetching from an existing API.
-const fakeContacts = {
+const fakeContacts = remember("fakeContacts", () => ({
   records: {} as Record<string, ContactRecord>,
 
   async getAll(): Promise<ContactRecord[]> {
@@ -58,7 +66,7 @@ const fakeContacts = {
     delete fakeContacts.records[id];
     return null;
   },
-};
+}));
 
 ////////////////////////////////////////////////////////////////////////////////
 // Handful of helper functions to be called from route loaders and actions
